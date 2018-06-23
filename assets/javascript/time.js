@@ -41,18 +41,27 @@
 
   });
 
-  dataRef.ref().on("submit-btn", function(childSnap) {
+  dataRef.ref().on("child_added", function(childSnap) {
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().role)
+      console.log(childSnap.val().date)
+      console.log(childSnap.val().rate)
       console.log(childSnap.val().name)
       console.log(childSnap.val().name)
-      console.log(childSnap.val().name)
-      console.log(childSnap.val().name)
-      console.log(childSnap.val().name)
-      console.log(childSnap.val().name)
+
+      var employeeTable = $("#employeeTable");
+      var newRow = $("<tr>");
+      var nameCell = $("<td>")
+      var roleCell = $("<td>")
+      var startDateCell = $("<td>")
+      var rateCell = $("<td>")
+      var monthlyRateCell = $("<td>")
+      var totalBilledCell = $("<td>")
 
       $("#full-member-list").append("<div class='employee-table'><span class='employee-name'> " + childSnap.val().name + 
       " </span><span class='employee-role'> " + childSnap.val().role +
       " </span><span class='employee-start-date'> " + childSnap.val().date +
-      " </span><span class='employee-rate'> " + childSnap.val().rate + "</span></div>";
+      " </span><span class='employee-rate'> " + childSnap.val().rate + "</span></div>");
 
       //error-handlling
    }, function(errorObject) {
