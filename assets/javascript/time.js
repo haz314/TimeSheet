@@ -49,5 +49,15 @@
       console.log(childSnap.val().name)
       console.log(childSnap.val().name)
 
+      $("#full-member-list").append("<div class='employee-table'><span class='employee-name'> " + childSnap.val().name + 
+      " </span><span class='employee-role'> " + childSnap.val().role +
+      " </span><span class='employee-start-date'> " + childSnap.val().date +
+      " </span><span class='employee-rate'> " + childSnap.val().rate + "</span></div>";
 
-  })
+      //error-handlling
+   }, function(errorObject) {
+     $("");
+      
+
+
+  });
