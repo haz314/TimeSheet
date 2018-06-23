@@ -41,6 +41,15 @@
 
   });
 
+<<<<<<< HEAD
+  dataRef.ref().on("submit-btn", function(childSnap) {
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+=======
   dataRef.ref().on("child_added", function(childSnap) {
       console.log(childSnap.val().name);
       console.log(childSnap.val().role);
@@ -76,11 +85,12 @@
 
 
 
+>>>>>>> 426cb4029baf2829e57b5ea4e7d8f4bffb744ed3
 
       $("#full-member-list").append("<div class='employee-table'><span class='employee-name'> " + childSnap.val().name + 
       " </span><span class='employee-role'> " + childSnap.val().role +
       " </span><span class='employee-start-date'> " + childSnap.val().date +
-      " </span><span class='employee-rate'> " + childSnap.val().rate + "</span></div>");
+      " </span><span class='employee-rate'> " + childSnap.val().rate + "</span></div>";
 
       //error-handlling
    //}, function(errorObject) {
