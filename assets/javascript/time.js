@@ -25,7 +25,7 @@
       for (i = 0; i < 6; i++) {
          var newColumn = $("<td>");
          newColumn.text(name);
-         newColumn.append(role);
+         newColumn.text(role);
          newColumn.append(date);
          newColumn.append(rate);
          $("#")
@@ -40,3 +40,14 @@
 
 
   });
+
+  dataRef.ref().on("submit-btn", function(childSnap) {
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+      console.log(childSnap.val().name)
+
+
+  })
